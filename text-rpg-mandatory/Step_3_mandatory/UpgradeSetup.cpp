@@ -1,3 +1,4 @@
+#include "../Step_1_mandatory/CharacterSetup.h"
 #include "UpgradeSetup.h"
 
 bool UpgradeSetup(int InsertStat[])
@@ -5,8 +6,9 @@ bool UpgradeSetup(int InsertStat[])
     int choice;
     int HpUpPotion = 5;
     int MpUpPotion = 5;
-    
-    while (true)
+    bool isGameStart = false;
+
+    while (!isGameStart)
     {
 
         cout << "You have " << HpUpPotion << " HP Up potions left" << endl;
@@ -23,12 +25,16 @@ bool UpgradeSetup(int InsertStat[])
         {
 
             case 0:
-                return true;
+                isGameStart = true;
+                cout << "Starting the game..." << endl;
+                break;
             case 1:
                 if (HpUpPotion > 0)
                 {
                     InsertStat[0] += 20;
                     HpUpPotion--;
+                    cout << "HP +20! Current HP: " << InsertStat[0] << endl;
+                    cout << "You have " << HpUpPotion << " HP Up potions left." << endl;
                 }
                 else
                 {
@@ -40,6 +46,8 @@ bool UpgradeSetup(int InsertStat[])
                 {
                     InsertStat[1] += 20;
                     MpUpPotion--;
+                    cout << "MP +20! Current MP: " << InsertStat[1] << endl;
+                    cout << "You have " << MpUpPotion << " MP Up potions left." << endl;
                 }
                 else
                 {
@@ -53,11 +61,7 @@ bool UpgradeSetup(int InsertStat[])
                 InsertStat[3] *= 2;
                 break;
             case 5:
-                cout << "====================================================" << endl;
-                cout << "Current stats:" << endl;
-                cout << "HP: " << InsertStat[0] << "MP: " << InsertStat[1] << endl;
-                cout << "Attack: " << InsertStat[2] << "Defense: " << InsertStat[3] << endl;
-                cout << "====================================================" << endl;
+                PrintStatus("Your character", InsertStat);
                 break;
             default:
                 cout << "Invalid choice. No stats were upgraded." << endl;
@@ -65,4 +69,7 @@ bool UpgradeSetup(int InsertStat[])
 
         }
     }
+
+    return isGameStart;
+
 }

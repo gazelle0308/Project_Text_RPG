@@ -1,0 +1,19 @@
+#pragma once
+
+#include "Player.h"
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Warrior : public Player
+{
+
+public:
+
+    Warrior(string name, int hp = 50, int mp = 50, int power = 50, int defence = 50, int level = 1);
+
+    void attack();
+
+};

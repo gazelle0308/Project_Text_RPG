@@ -15,7 +15,6 @@ void SetupStatus(string& InsertName, int InsertStat[])
     cout << "=================================================" << endl;
     //stat[0] = HP, stat[1] = MP, stat[2] = 공격력, stat[3] = 방어력
 }
-
 void PrintStatus(const string PrintName, const int PrintStat[])
 {
 

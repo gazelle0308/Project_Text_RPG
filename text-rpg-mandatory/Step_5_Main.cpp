@@ -10,6 +10,8 @@
 #include "Step_4_mandatory/SelectClass.h"
 
 
+#include "Step_5_mandatory/Battle.h"
+
 
 int main()
 {
@@ -33,7 +35,18 @@ int main()
         player = SelectClass(name, stat);
         
     }
+    while(player->GetHp() > 0)
+    {
+        Monster* monster = nullptr;
 
+        if( rand()% 2 == 0 ) { monster = new Mushroom(); }
+        else { monster = new Slime(); }
+
+        BattleAssist( player, monster );
+        delete monster;
+
+    }
+    
     delete player;
     return 0;
 

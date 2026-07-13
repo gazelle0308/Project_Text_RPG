@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Player.h"
+#include "../Step_5_mandatory/MonsterBone.h"
 
 #include <iostream>
 #include <string>
@@ -14,6 +15,6 @@ public:
 
     Thief(string name, int hp = 50, int mp = 50, int power = 50, int defence = 50, int level = 1);
     
-    void attack();
+    void attack(Monster* monster);
 
 };

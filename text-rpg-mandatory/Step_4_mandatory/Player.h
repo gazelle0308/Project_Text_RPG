@@ -11,7 +11,7 @@ class Player
 public:
 
 //virtual
-    virtual void attack() = 0;
+    virtual void attack( Monster* monster ) = 0;
     virtual ~Player() {};
 
 //Function

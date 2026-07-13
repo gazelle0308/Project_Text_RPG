@@ -9,5 +9,13 @@ Thief::Thief(string name, int hp, int mp, int power, int defence, int level)
 
 }
 
-void Thief::attack(){ cout << "Thief" << name << "'s Dagger Throw!" << endl; }
+void Thief::attack( Monster* monster )
+{
+    
+    int InsertDmg = monster->GetHp() - ( monster->GetDefence() - this->power );
+
+    monster->SetHp( InsertDmg <= 0 ? 1 : InsertDmg ); 
+    cout << "Thief" << name << "'s Dagger Throw!" << endl; 
+
+}
 

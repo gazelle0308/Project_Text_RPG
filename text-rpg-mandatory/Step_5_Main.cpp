@@ -7,10 +7,14 @@
 #include "Step_3_mandatory/UpgradeSetup.h"
 
 
+#include "Step_4_mandatory/Player.h"
 #include "Step_4_mandatory/SelectClass.h"
 
 
 #include "Step_5_mandatory/Battle.h"
+#include "Step_5_mandatory/Slime.h"
+#include "Step_5_mandatory/Mushroom.h"
+#include "Step_5_mandatory/MonsterBone.h"
 
 
 int main()
@@ -29,21 +33,34 @@ int main()
     isGameStart = UpgradeSetup(stat); 
 
     Player* player = nullptr;
+
     while(player == nullptr)
     {
 
         player = SelectClass(name, stat);
         
     }
-    while(player->GetHp() > 0)
+    
+    int loop = 0;
+
+    while(player->GetHp() > 0 && loop < 5 )
     {
-        Monster* monster = nullptr;
 
-        if( rand()% 2 == 0 ) { monster = new Mushroom(); }
-        else { monster = new Slime(); }
+        unique_ptr<Monster> monster = nullptr;
 
-        BattleAssist( player, monster );
-        delete monster;
+        if( rand() % 2 == 0 ) { monster = make_unique<Mushroom>(); }
+        else { monster = make_unique<Slime>(); }
+
+        BattleAssist( *player, *monster );
+        loop = loop + 1;
+
+        if( player->GetHp() <= 0 )
+        {
+
+            cout << "You Died" << endl;
+            break;
+
+        }
 
     }
     

@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "../Step_5_mandatory/MonsterBone.h"
 
 Player::Player(string name, int hp, int mp, int power, int defence, int level)
 :name(name), hp(hp), mp(mp), power(power), defence(defence), level(level)

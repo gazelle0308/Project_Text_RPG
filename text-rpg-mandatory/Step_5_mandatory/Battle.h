@@ -11,4 +11,6 @@
 
 using namespace std;
 
-void BattleAssist( Player* player, Monster* monster );
+void BattleAssist(Player& player, Monster& monster);
+
+void ExtractDropItem( const Monster& monster, string& itemName, int& price);

@@ -15,7 +15,7 @@ bool UpgradeSetup(int InsertStat[])
 
         cout << "<You have a chance to upgrade your stats!>" << endl;
         cout << "====================================================" << endl;
-        cout << "1.Use HP Up 20" << " 2.Use MP Up 20" << " 3.Attack x 2" << endl;
+        cout << "1.Use HP Up 20" << " 2.Use MP Up 20" << " 3.Power x 2" << endl;
         cout << "4.Defense x 2" << " 5.Show Stats" << " 0.Start Game" << endl;
         cout << "====================================================" << endl;
         cout << "Please choose an option (0-5): ";
@@ -60,9 +60,11 @@ bool UpgradeSetup(int InsertStat[])
                 break;
             case 3:
                 InsertStat[2] *= 2;
+                cout << "Power x 2! Current Power: " << InsertStat[2] << endl;
                 break;
             case 4:
                 InsertStat[3] *= 2;
+                cout << "Defense x 2! Current Defense: " << InsertStat[3] << endl;
                 break;
             case 5:
                 PrintStatus("Your character", InsertStat);

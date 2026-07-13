@@ -5,14 +5,16 @@
 
 using namespace std;
 
+class Monster;
+
 class Player
 {
 
 public:
 
 //virtual
-    virtual void attack( Monster* monster ) = 0;
-    virtual ~Player() {};
+    virtual void attack(Monster* monster) = 0;
+    virtual ~Player() = default;
 
 //Function
     void printStatus();

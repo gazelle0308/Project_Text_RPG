@@ -1,29 +1,29 @@
 #pragma once
 
-#include "../Step_4_mandatory/Player.h"
-
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class Player;
 
 class Monster
 {
 public:
 
 //virtual
-    virtual void attack( Player* player ) = 0;
+    virtual void attack(Player* player) = 0;
     virtual void Buff() = 0;
-    virtual ~Monster();
+    virtual ~Monster() = default;
 
 //Getter
-    string GetName();
-    string GetDropItemName();
+    string GetName() const;
+    string GetDropItemName() const;
 
-    int GetHp();
-    int GetPower();
-    int GetDefence();
-    int GetDropItemPrice();
+    int GetHp() const;
+    int GetPower() const;
+    int GetDefence() const;
+    int GetDropItemPrice() const;
 
 //Setter
     void SetName(string name);

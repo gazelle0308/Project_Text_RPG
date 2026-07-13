@@ -13,10 +13,10 @@ Archer::Archer(string name, int hp, int mp, int power, int defence, int level)
 void Archer::attack( Monster* monster )
 {
 
-    int InsertDmg = monster->GetHp() - ( monster->GetDefence() - this->power );
+    int InsertDmg = this->power - monster->GetDefence();
 
-    monster->SetHp( InsertDmg <= 0 ? 1 : InsertDmg ); 
-    cout << "Archer" << name << "'s Shoot!" << endl;
+    monster->SetHp( InsertDmg <= 0 ? monster->GetHp() - 1 : monster->GetHp() - InsertDmg ); 
+    cout << "Archer " << name << "'s Shoot!" << endl;
 
 }
 

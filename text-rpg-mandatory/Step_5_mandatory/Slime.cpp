@@ -1,6 +1,6 @@
 #include "Slime.h"
 
-Slime::Slime( string name, string ItemName, int hp, int power, int defence, int ItemPrice)
+Slime::Slime(string name, string ItemName, int hp, int power, int defence, int ItemPrice)
 :Monster(name, hp, power, defence)
 { 
 
@@ -9,13 +9,13 @@ Slime::Slime( string name, string ItemName, int hp, int power, int defence, int 
 
 }
 
-void Slime::attack( Player* player )
+void Slime::attack(Player* player)
 {
 
-    int InsertDmg = player->GetHp() - ( player->GetDefence() - this->power );
+    int InsertDmg = this->power - player->GetDefence();
 
     cout<<"Slime's Jump acttack!"<<endl;
-    player->SetHp( InsertDmg <= 0 ? 1 : InsertDmg ); 
+    player->SetHp( InsertDmg <= 0 ? player->GetHp() - 1 : player->GetHp() - InsertDmg ); 
 
 }
 

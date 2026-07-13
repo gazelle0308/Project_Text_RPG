@@ -9,7 +9,7 @@ Player* SelectClass( string name, int stat[] )
     cout<< "1. Magician" << " 2. Warrior" << " 3. Archer" << " 4. Thief" << endl;
     cout << "Select your class: ";
     cin >> selectedClass;
-    cout << "=================================================" << endl;
+    cout << "====================================================" << endl;
 
     switch (selectedClass)
     {

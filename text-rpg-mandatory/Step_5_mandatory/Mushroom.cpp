@@ -1,6 +1,6 @@
 #include "Mushroom.h"
 
-Mushroom::Mushroom( string name, string ItemName, int hp, int power, int defence, int ItemPrice)
+Mushroom::Mushroom(string name, string ItemName, int hp, int power, int defence, int ItemPrice)
 :Monster(name, hp, power, defence)
 { 
 
@@ -9,13 +9,13 @@ Mushroom::Mushroom( string name, string ItemName, int hp, int power, int defence
 
 }
 
-void Mushroom::attack( Player* player )
+void Mushroom::attack(Player* player)
 {
 
-    int InsertDmg = player->GetHp() - ( player->GetDefence() - this->power );
+    int InsertDmg = this->power - player->GetDefence();
 
     cout<<"Mushroom's Jump acttack!"<<endl;
-    player->SetHp( InsertDmg <= 0 ? 1 : InsertDmg ); 
+    player->SetHp( InsertDmg <= 0 ? player->GetHp() - 1 : player->GetHp() - InsertDmg ); 
 
 }
 

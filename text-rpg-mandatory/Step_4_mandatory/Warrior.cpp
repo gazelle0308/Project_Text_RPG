@@ -11,9 +11,9 @@ Warrior::Warrior(string name, int hp, int mp, int power, int defence, int level)
 void Warrior::attack( Monster* monster )
 { 
     
-    int InsertDmg = monster->GetHp() - ( monster->GetDefence() - this->power );
+    int InsertDmg = this->power - monster->GetDefence();
 
-    monster->SetHp( InsertDmg <= 0 ? 1 : InsertDmg ); 
-    cout << "Warrior" << name << "'s Slash!" << endl; 
+    monster->SetHp( InsertDmg <= 0 ? monster->GetHp() - 1 : monster->GetHp() - InsertDmg ); 
+    cout << "Warrior " << name << "'s Slash!" << endl; 
 }
 

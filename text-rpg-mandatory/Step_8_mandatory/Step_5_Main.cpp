@@ -1,20 +1,20 @@
-#include "Step_1_mandatory/CharacterSetup.h"
+#include "../Step_1_mandatory/CharacterSetup.h"
 
 
-#include "Step_2_mandatory/SetupCheck.h"
+#include "../Step_2_mandatory/SetupCheck.h"
 
 
-#include "Step_3_mandatory/UpgradeSetup.h"
+#include "../Step_3_mandatory/UpgradeSetup.h"
 
 
-#include "Step_4_mandatory/Player.h"
-#include "Step_4_mandatory/SelectClass.h"
+#include "../Step_4_mandatory/Player.h"
+#include "../Step_4_mandatory/SelectClass.h"
 
 
-#include "Step_5_mandatory/Battle.h"
-#include "Step_5_mandatory/Slime.h"
-#include "Step_5_mandatory/Mushroom.h"
-#include "Step_5_mandatory/MonsterBone.h"
+#include "../Step_5_mandatory/Battle.h"
+#include "../Step_5_mandatory/Slime.h"
+#include "../Step_5_mandatory/Mushroom.h"
+#include "../Step_5_mandatory/MonsterBone.h"
 
 
 int main()

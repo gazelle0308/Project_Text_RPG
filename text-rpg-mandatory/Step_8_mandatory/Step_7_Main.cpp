@@ -1,25 +1,26 @@
-#include "Step_1_mandatory/CharacterSetup.h"
+#include "../Step_1_mandatory/CharacterSetup.h"
 
 
-#include "Step_2_mandatory/SetupCheck.h"
+#include "../Step_2_mandatory/SetupCheck.h"
 
 
-#include "Step_3_mandatory/UpgradeSetup.h"
+#include "../Step_3_mandatory/UpgradeSetup.h"
 
 
-#include "Step_4_mandatory/Player.h"
-#include "Step_4_mandatory/SelectClass.h"
+#include "../Step_4_mandatory/Player.h"
+#include "../Step_4_mandatory/SelectClass.h"
 
 
-#include "Step_5_mandatory/Battle.h"
-#include "Step_5_mandatory/Slime.h"
-#include "Step_5_mandatory/Mushroom.h"
-#include "Step_5_mandatory/MonsterBone.h"
+#include "../Step_5_mandatory/Battle.h"
+#include "../Step_5_mandatory/Slime.h"
+#include "../Step_5_mandatory/Mushroom.h"
+#include "../Step_5_mandatory/MonsterBone.h"
 
 
-#include "Step_6_mandatory/Inventory.h"
-#include "Step_6_mandatory/Ui.h"
+#include "../Step_6_mandatory/Inventory.h"
+#include "../Step_6_mandatory/Ui.h"
 
+#include "../Step_7_mandatory/AlchemyWorkshop.h"
 
 int main()
 {
@@ -34,10 +35,13 @@ int main()
 
     vector<Item> Inventory;
 
+    vector<Potion> PotionInventory;
+
+
     SetupStatus(name, stat);
     SetupCheck(stat);
     isGameStart = UpgradeSetup(stat); 
-
+    defalutPotion(PotionInventory);
 
     Player* player = nullptr;
 
@@ -83,13 +87,21 @@ int main()
         }
         else if(play == 2)
         {
-
+            cout << "=================================================" << endl;
             for( auto loop = Inventory.begin(); loop != Inventory.end(); ++loop)
             {
 
                 loop->PrintInfo();
 
             }
+            cout << "=================================================" << endl;
+            cout << endl;
+
+        }
+        else if(play == 3)
+        {
+
+            AlchemyUi(PotionInventory);
 
         }
         else

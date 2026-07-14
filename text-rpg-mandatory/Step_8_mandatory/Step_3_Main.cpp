@@ -1,6 +1,6 @@
-#include "Step_1_mandatory/CharacterSetup.h"
-#include "Step_2_mandatory/SetupCheck.h"
-#include "Step_3_mandatory/UpgradeSetup.h"
+#include "../Step_1_mandatory/CharacterSetup.h"
+#include "../Step_2_mandatory/SetupCheck.h"
+#include "../Step_3_mandatory/UpgradeSetup.h"
 
 int main()
 {

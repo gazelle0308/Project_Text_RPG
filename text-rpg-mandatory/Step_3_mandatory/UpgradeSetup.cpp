@@ -20,6 +20,7 @@ bool UpgradeSetup(int InsertStat[])
         cout << "====================================================" << endl;
         cout << "Please choose an option (0-5): ";
         cin >> choice;
+        cout << endl;
 
         switch(choice)
         {
@@ -35,11 +36,13 @@ bool UpgradeSetup(int InsertStat[])
                     HpUpPotion--;
                     cout << "HP +20! Current HP: " << InsertStat[0] << endl;
                     cout << "You have " << HpUpPotion << " HP Up potions left." << endl;
+                    cout << endl;
                     break;
                 }
                 else
                 {
                     cout << "You don't have any HP Up potions left!" << endl;
+                    cout << endl;
                     break;
                 }
                 break;
@@ -50,27 +53,32 @@ bool UpgradeSetup(int InsertStat[])
                     MpUpPotion--;
                     cout << "MP +20! Current MP: " << InsertStat[1] << endl;
                     cout << "You have " << MpUpPotion << " MP Up potions left." << endl;
+                    cout << endl;
                     break;
                 }
                 else
                 {
                     cout << "You don't have any MP Up potions left!" << endl;
+                    cout << endl;
                     break;
                 }
                 break;
             case 3:
                 InsertStat[2] *= 2;
                 cout << "Power x 2! Current Power: " << InsertStat[2] << endl;
+                cout << endl;
                 break;
             case 4:
                 InsertStat[3] *= 2;
                 cout << "Defense x 2! Current Defense: " << InsertStat[3] << endl;
+                cout << endl;
                 break;
             case 5:
                 PrintStatus("Your character", InsertStat);
                 break;
             default:
                 cout << "Invalid choice. No stats were upgraded." << endl;
+                cout << endl;
                 break;
         }
     }

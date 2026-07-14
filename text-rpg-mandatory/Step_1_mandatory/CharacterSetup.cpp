@@ -3,6 +3,7 @@
 void SetupStatus(string& InsertName, int InsertStat[])
 {
 
+    cout << endl;
     cout << "=================================================" << endl;
     cout << "[Dungeon Escape RPG]" << endl;
     cout << "=================================================" << endl;
@@ -13,16 +14,18 @@ void SetupStatus(string& InsertName, int InsertStat[])
     cout << "Input your character's attack and defense: ";
     cin >> InsertStat[2] >> InsertStat[3];
     cout << "=================================================" << endl;
+    cout << endl;
     //stat[0] = HP, stat[1] = MP, stat[2] = 공격력, stat[3] = 방어력
 }
 void PrintStatus(const string PrintName, const int PrintStat[])
 {
-
-    cout << "================================" << endl;
+    cout << endl;
+    cout << "=================================================" << endl;
     cout << PrintName << "'s stats:" << endl;
-    cout << "================================" << endl;
+    cout << "=================================================" << endl;
     cout << "HP : " << PrintStat[0] << " MP : " << PrintStat[1] << endl;
     cout << "Attack : " << PrintStat[2] << " Defense : " << PrintStat[3] << endl;
-    cout << "================================" << endl;
+    cout << "=================================================" << endl;
+    cout << endl;
 
 }

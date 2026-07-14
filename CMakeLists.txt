@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Project_Text_RPG
 
-    text-rpg-mandatory/Step_6_Main.cpp
+    text-rpg-mandatory/Step_8_mandatory/Step_7_Main.cpp
 
     text-rpg-mandatory/Step_1_mandatory/CharacterSetup.cpp
 
@@ -29,6 +29,10 @@ add_executable(Project_Text_RPG
     
     text-rpg-mandatory/Step_6_mandatory/Inventory.cpp
     text-rpg-mandatory/Step_6_mandatory/Ui.cpp
+
+    text-rpg-mandatory/Step_7_mandatory/AlchemyWorkshop.cpp
+    text-rpg-mandatory/Step_7_mandatory/PotionRecipe.cpp
+
 )
 
 target_include_directories(Project_Text_RPG PRIVATE

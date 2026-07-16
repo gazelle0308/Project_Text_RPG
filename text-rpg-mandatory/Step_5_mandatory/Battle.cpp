@@ -8,11 +8,11 @@ void BattleAssist(Player& player, Monster& monster){
     cout<< "< Battle Begin! >" << endl;
     cout<< player.GetName() << "(" << player.GetJob() << ")" << " vs " << monster.GetName() << endl;
     cout << "====================================================" << endl;
-        cout << endl;
+    cout << endl;
 
     while( player.GetHp() > 0 && monster.GetHp() > 0 ){
 
-    cout << "====================================================" << endl;
+        cout << "====================================================" << endl;
         cout<<"---Now Player Turn---"<< endl;
         player.attack(&monster);
         cout<<"Player attack: " << (playerDmg <= 0 ? 1 : playerDmg) << "(basic:" << player.GetPower() <<")" << endl;
@@ -21,7 +21,7 @@ void BattleAssist(Player& player, Monster& monster){
 
         if(monster.GetHp() > 0)
         {
-            cout << "====================================================" << endl;
+            cout <<"===================================================="<< endl;
             cout<<"---Now Monster Turn---"<< endl;
 
             if( rand()% 2 == 0 ){

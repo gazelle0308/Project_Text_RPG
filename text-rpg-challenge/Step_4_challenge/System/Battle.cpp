@@ -38,10 +38,14 @@ void BattleAssist(Player& player, Monster& monster, std::vector<Item>& inventory
                 inventory[itemNumber - 1].SetCount(inventory[itemNumber - 1].GetCount() - 1); 
                 if(inventory[itemNumber - 1].GetName() == "HpPotion")
                 {
+                    std::cout<<"Use HpPotion!"<< std::endl;
+                    std::cout<<"Heal Hp:" << std::min(player.GetHp() + 50, player.GetMaxHp()) << std::endl;
                     player.SetHp(std::min(player.GetHp() + 50, player.GetMaxHp()));
                 }
                 else if(inventory[itemNumber - 1].GetName() == "MpPotion")
                 {
+                    std::cout<<"Use MpPotion!"<< std::endl;
+                    std::cout<<"Heal Mp:" << std::min(player.GetMp() + 50, player.GetMaxMp()) << std::endl;
                     player.SetMp(std::min(player.GetMp() + 50, player.GetMaxMp()));
                 }
                 else

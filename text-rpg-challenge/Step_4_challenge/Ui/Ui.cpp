@@ -82,9 +82,9 @@ void StartLine()
 
 void ShowItemInfo(const std::string Iventory)
 {
-
+    StartLine();
     std::cout << Iventory << std::endl;
-
+    StartLine();
 }
 
 

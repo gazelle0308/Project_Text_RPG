@@ -2,6 +2,9 @@
 
 /*-------------------------Inventory-----------------------------*/
 
+bool compareByPrice(const Item& a, const Item& b){ return a.GetPrice() < b.GetPrice(); }
+
+
 std::string ItemInfo(const Inventory<Item>& inventory)
 {
     std::ostringstream oss;
